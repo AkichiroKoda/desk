@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Задача 4</title>
+</head>
+<body>
+    <script>
+       var length = prompt("Выберите единицу измерения:\n 1 - дециметр \n 2 - километр \n 3 - метр \n 4 - милиметр \n 5 - сантиметр");
+       var number = parseFloat(prompt("Введите длину отрезка в заданной единице измерения."));
+
+        switch(length) {
+            case '1':
+            alert((number/10) + " метров");
+            break;
+            case '2':
+            alert((number*1000) + " метров");
+            break;
+            case '3':
+            alert(number + " метров");
+            break;
+            case '4':
+            alert((number/1000) + " метров");
+            break;
+            case '5':
+            alert((number/100) + " метров");
+            break;
+        }
+    </script>
+</body>
+</html>

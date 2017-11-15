@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Таблица умножения</title>
+</head>
+<body>
+   <h1>Таблица умножения</h1>
+    <script>
+        var table = "<table style=\"border:1px dashed red;\"><tr><th>Таблица<br>умножения</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th>"
+        var i = 1
+        while(i<=10){
+            table = table + "<tr><td>"+i+"</td><td>"+(i*1)+"</td><td>"+(i*2)+"</td><td>"+(i*3)+"</td><td>"+(i*4)+"</td><td>"+(i*5)+"</td><td>"+(i*6)+"</td><td>"+(i*7)+"</td><td>"+(i*8)+"</td><td>"+(i*9)+"</td><td>"+(i*10)+"</td></tr>";
+            i++;
+        }
+        table = table + "</table>";
+            document.write(table);
+    </script>
+</body>
+</html>

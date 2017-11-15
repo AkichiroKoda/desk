@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Задача 2</title>
+</head>
+<body>
+    <script>
+    var p1 = prompt("Введите координаты X,Y,Z первой вершины треугольника через , без пробелов");
+    var p2 = prompt("Введите координаты X,Y,Z второй вершины треугольника через , без пробелов");
+    var p3 = prompt("Введите координаты X,Y,Z третьей вершины треугольника через , без пробелов");
+    var line1 = p1.split(',');
+    var line2 = p2.split(',');
+    var line3 = p3.split(',');
+    var x1 = line1[0];
+    var x2 = line2[0];
+    var x3 = line3[0];     
+    var y1 = line1[1];
+    var y2 = line2[1];
+    var y3 = line3[1];
+    var z1 = line1[2];
+    var z2 = line2[2];
+    var z3 = line3[2];
+    var squareLine1 = ((x2 - x1)*(x2-x1)+(y2-y1)*(y2-y1)+(z2-z1)*(z2-z1));
+    var squareLine2 = ((x3 - x2)*(x3-x2)+(y3-y2)*(y3-y2)+(z3-z2)*(z3-z2));
+    var squareLine3 = ((x3 - x1)*(x3-x1)+(y3-y1)*(y3-y1)+(z3-z1)*(z3-z1));
+
+    if (squareLine1 == squareLine2 + squareLine3 || squareLine2 == squareLine1 + squareLine3 || squareLine3 == squareLine2 + squareLine1) {
+        alert("Это прямоугольный треугольник");
+    } else {
+        alert("Это не прямоугольный треугольник");
+    }
+    </script>
+</body>
+</html>
