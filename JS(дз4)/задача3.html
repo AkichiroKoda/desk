@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Задача 3</title>
+</head>
+<body>
+    <script>
+    var arr = [13, 4, 3, 10, 1, 20];
+    var min = arr[0];
+    var max = arr[0];
+        for(var i = 0; i < arr.length; i++){
+            if(min> arr[i]){
+                min = arr[i];
+            }
+        }
+    var indexMin = arr.indexOf(min);
+    arr.splice(indexMin, 1);
+        for(var j = 0; j < arr.length; j++){
+            if(max< arr[j]){
+                max = arr[j];
+            }
+        }
+    var indexMax = arr.indexOf(max);
+    arr.splice(indexMax, 1);
+    alert("Минимальное значение в массиве: " + min + "\nМаксимальное значение в массиве: " + max + "\nМассив без минимального и максимального значения: " + arr);
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Задача 1</title>
+</head>
+<body>
+    <script>
+    var number  = prompt("Введите целое число");
+    var numeral = number.split("");
+    var sum = 0;
+    var i = 0; 
+        while(i<number.length){
+            sum += +numeral[i];
+            i++;
+        }
+        alert("Сумма цифр этого числа равна " + sum);
+    </script>
+</body>
+</html>

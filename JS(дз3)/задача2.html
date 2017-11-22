@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Задача2</title>
+</head>
+<body>
+    <script>
+    var s = prompt("Введите слово/словосчетание/предложение, содеражщее букву С.")
+    var letter = s.split("");
+    var i = 0;
+    var result;
+         while (i < letter.length) {
+             if (letter[i] == 'С' || letter[i] == 'с') {
+                 result += letter[i] + letter[i];
+             } else {
+                 result += letter[i];
+             }
+             i++;
+         }
+         
+         alert(result);
+    </script>
+</body>
+</html>
