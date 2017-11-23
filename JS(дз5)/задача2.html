@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Задача 2</title>
+</head>
+<body>
+    <script>
+    var a = [1, 2];
+    var b = [2, 3];
+    var c = a.concat(b);
+    
+    function uniqueC(arr){
+        var result = [];
+        nextInput:
+        for(var i = 0; i < arr.length; i++){
+            var str = arr[i];
+            for(var j = 0; j < arr.length; j++){
+                if(result[j]===str)
+                    continue nextInput;
+            }
+            result.push(str);
+        }
+        return result;
+    }
+    
+    alert(uniqueC(c));
+    </script>
+</body>
+</html>
