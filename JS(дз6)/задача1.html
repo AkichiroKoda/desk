@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Задача 1</title>
+</head>
+
+<body>
+    <script>
+        var a = parseInt(prompt("Введите число."));
+
+        function factorial(a) {
+            if (a) {
+                return a * factorial(a - 1);
+            } else {
+                return 1;
+            }
+        }
+        alert("Факториал числа " + a + " равен: " + factorial(a));
+
+    </script>
+</body>
+
+</html>
