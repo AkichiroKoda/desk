@@ -1,5 +1,5 @@
-;(function(){
-    function clock(){
+
+    ;(function clock(){
     var date = new Date();
     var hour = date.getHours();
     var minute = date.getMinutes();
@@ -17,5 +17,5 @@
     var setClock = document.getElementById("set_clock");
     setClock.innerHTML = hour + " : " + minute + " : " + second;
     setTimeout("clock()", 1000);
-}
-})(); 
+})();
+ 
