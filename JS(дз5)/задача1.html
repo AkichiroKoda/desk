@@ -6,14 +6,43 @@
 </head>
 <body>
     <script>
-    var objStudent = {
-        name: "Иван",
-        surname: "Иванов",
-        age: "21",
-        hobby: ["компьютерные игры", "музыка", "спорт"],
-        university: "ИТМО"
-    }
-    
+        var objStudent = {
+            name: "Иван",
+            surname: "Иванов",
+            age: "21",
+            university: "ИТМО",
+            hobby: [
+                {   
+                    name: "компьютерные игры",
+                    mean: "играть в компьютер с друзьями"
+                },
+                {
+                    name: "музыка",
+                    mean: "слушать музыку и ходить на концерты"
+                },
+                {
+                    name: "спорт",
+                    mean: "играть в командные виды спорта (футбол, волейбол, и т.д.)"
+                }
+            ]
+        }
+
+        function outPut(obj){
+            for(var i in obj){
+                if(typeof obj[i] === "object" && obj[i].length >0){
+                    alert("Свойство: " + i + " содержит " + obj[i].length + " элемента");
+                    for(var j = 0; j < obj[i].length; j++){
+                        alert("Элемент " + j + " содержит следующие свойства: ");
+                        for(var n in obj[i][j]){
+                            alert("Свойство " + n + " содержит: " + obj[i][j][n]);
+                        }
+                    }
+                } else {
+                    alert("Свойство " + i + " содержит " + obj[i]);
+                }
+            }
+        }
+        outPut(objStudent);
     </script>
 </body>
 </html>
