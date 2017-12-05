@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Светофор</title>
+    <style>
+        #trafficlight{
+            background-color: slategray;
+            margin: 50px;
+            padding: 0;
+            height: 300px;
+            width: 100px;
+        }
+        #red,
+        #yellow,
+        #green{
+            border-radius: 50%;
+            background-color: lightgray;
+            height: 100px;
+            width: 100px;
+        }
+        #red.on{
+            background-color: red;
+        }
+        #yellow.on{
+            background-color: yellow;
+        }
+        #green.on{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+   <div id="trafficlight">
+   <div id="red" class=""></div>
+   <div id="yellow" class=""></div>
+   <div id="green" class="on"></div>
+   </div>
+    <script>
+        var red = document.getElementById("red");
+        var ylw = document.getElementById("yellow");
+        var grn = document.getElementById("green");
+        var tempFunc = light();
+        var timer = setInterval(function(){
+            tempFunc();
+        }, 2000);
+        function light() {
+            var i=1;
+            return function(){
+                if(i===1){
+                    ylw.classList.toggle("on");
+                    grn.classList.toggle("on");
+                    i++;
+                } else if(i===2){
+                    red.classList.toggle("on");
+                    ylw.classList.toggle("on");
+                    i++;
+                } else if(i===3){
+                    ylw.classList.toggle("on");
+                    red.classList.toggle("on");
+                    i++
+                    
+                } else {
+                    ylw.classList.toggle("on");
+                    grn.classList.toggle("on");
+                    i=1;           
+                }
+            }
+        }
+    </script>
+</body>
+</html>
