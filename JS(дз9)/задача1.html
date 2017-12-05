@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Задача1</title>
+    <style>
+        div{
+            margin: 10px;
+            height: 20px;
+            width: 200px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <section id = "cont">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+    <script>
+        cont.addEventListener("click", change, true);
+        function change(e) {
+            if(e.target.tagName === "DIV") {
+                if(e.target.style.background === ""){
+                    e.target.style.background = "green";
+                } else {
+                    e.target.style.background = "";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
