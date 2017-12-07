@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Задача 2</title>
+</head>
+<body>
+    <script>
+        function Human(name, age, gender, hobby){
+            this.name = name;
+            this.age = age;
+            this.gender = gender;
+            this.hobby = hobby;
+            this.toString = function(){
+                return "Человек: " + this.name + "\nВозраст: " + this.age + "\nПол: " + this.gender + "\nИнтересы: " + this.hobby;
+            }
+        }
+        
+        function Student (name, age, gender, hobby, school){
+            Human.call(this, name, age, gender, hobby);
+            this.school = school;
+            this.toString = function(){
+                return "Студент: " + this.name + "\nВозраст: " + this.age + "\nПол: " + this.gender + "\nИнтересы: " + this.hobby + "\nОбучается в " + this.school;
+            }
+        }
+        
+        var hobby = ["компьютерные игры", " сон"];
+        var student1 = new Student("Иван", 25, "м", hobby, "ИТМО");
+        alert(student1);
+    </script>
+</body>
+</html>
