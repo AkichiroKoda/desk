@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Задача 1</title>
+</head>
+<body>
+    <script>
+        function Item(name, cost){
+            this.name = name;
+            this.cost = cost;
+        }
+        
+        function Basket(){
+            var items = [];
+            var count = items.length;
+            var sum = 0;
+            this.add = function(item){
+                items.push(item);
+            }
+            this.calculateCost = function(){
+                for (var i = 0; i < items.length; i++){
+                    sum += items[i].cost;
+                }
+                return sum;
+            }
+            this.countItems = function(){
+                return items.length;     
+            }
+            this.listItems = function(){
+                var names = [];
+                for (var i = 0; i < items.length; i++){
+                    names.push(items[i].name);
+                }
+                return names;
+            }
+        }
+        
+        var item1 = new Item("хлеб", 50);
+        var item2 = new Item("сыр", 150);
+        var item3 = new Item("чай", 50);
+        
+        var myBasket = new Basket;
+        myBasket.add(item1);
+        myBasket.add(item2);
+        myBasket.add(item3);
+        var count = myBasket.countItems();
+        var list = myBasket.listItems();
+        var price = myBasket.calculateCost();
+     
+        alert("Товаров в карзине: " + count + "\nТовары: " + list + "\nК оплате: " + price + " рублей");
+    </script>
+</body>
+</html>
